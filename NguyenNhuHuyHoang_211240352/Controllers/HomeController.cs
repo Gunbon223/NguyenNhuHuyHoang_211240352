@@ -28,5 +28,13 @@ namespace NguyenNhuHuyHoang_211240352.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-    }
+		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+		{
+			// Các cấu hình khác...
+
+			app.UseStaticFiles(); // Cấu hình phục vụ các tệp tin tĩnh (css, js, hình ảnh...)
+
+			// Các cấu hình khác...
+		}
+	}
 }
